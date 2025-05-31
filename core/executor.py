@@ -114,7 +114,8 @@ class FuzzContainer:
             subprocess.run([
                 'docker', 'exec', '-d', cname,
                 'bash', '-ic',
-                'ros2 launch turtlebot3_gazebo empty_world.launch.py '
+                #'ros2 launch turtlebot3_gazebo empty_world.launch.py '
+                'ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py '
                 '> /proc/1/fd/1 2>/proc/1/fd/2 &'
             ], check=True)
             self._wait_for_log(cname, r'process has finished cleanly')
