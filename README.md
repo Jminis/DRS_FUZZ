@@ -18,10 +18,11 @@ it targets common ROS 2 communication channels and injects mutated RTPS packets 
 
 ## ▶️ Run Commands
 ```bash
-python3 main.py <ros2_distribution> <robot>
+python3 main.py <ros2_distribution> <robot> <topic_name> <headless_option> <asan_option>
 # examples:
-python3 main.py humble turtlebot3
-python3 main.py jazzy  turtlebot3
+python3 main.py humble turtlebot3 cmd_vel
+python3 main.py humble turtlebot3 cmd_vel --headless --asan
+python3 main.py jazzy  turtlebot3 cmd_vel
 ```
 ## 📁 Directory Structure
 ```bash
